@@ -224,7 +224,7 @@
                         "Reports_Table_name": "[parameters('Proxy_Port')]",
                         "Schedule": "[parameters('Schedule')]",
                         "LogLevel": "[parameters('LogLevel')]",
-                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/rushitajudiya-crest/cofense-triage/blob/main/Cofense.zip?raw=true"
+                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/harshcds1212/Cofense_Sentinel_integration/blob/main/Cofense.zip?raw=true"
                     }
                 }
             ]
