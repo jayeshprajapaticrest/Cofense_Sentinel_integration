@@ -7,7 +7,7 @@
 
 ## Introduction<a name="Introduction"></a>
 
-The Cofense-Triage data connector gives the below capabilities :
+The Cofense-Triage data connector gives the below capabilities:
 
 1. CofenseBasedIndicatorCreator :
 Get Threat Indicators from the Cofense platform and create Threate Intelligence Indicators in Microsoft Sentinel.
@@ -47,7 +47,7 @@ To integrate with Cofense Triage make sure you have:
 > **(Optional Step)** Securely store workspace and API authorization key(s) or token(s) in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
 
 
-### STEP 1 - Registration steps for the Microsoft Azure Active Directory application
+### STEP 1 - Registration steps for the Microsoft Azure Active Directory Application
 
 This integration requires an App registration in the Azure portal. Follow the steps in this section to create a new Azure Active Directory application:
 
@@ -60,7 +60,7 @@ This integration requires an App registration in the Azure portal. Follow the st
 
 **Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 
-### STEP 2 - Add a client secret for Microsoft Azure Active Directory application
+### STEP 2 - Add a client secret for Microsoft Azure Active Directory Application
 
 Sometimes called an application password, a client secret is a string value required for the execution of CofenseTriage Data Connector. Follow the steps in this section to create a new App registration:
 
@@ -73,7 +73,7 @@ Sometimes called an application password, a client secret is a string value requ
 
 **Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
 
-### STEP 3 - Assign role of Contributer to App.
+### STEP 3 - Assign role of Contributer to Microsoft Azure Active Directory Application
 
 Follow the steps in this section to assign the role:
 
