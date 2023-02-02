@@ -9,10 +9,10 @@
 
 The Cofense-Triage data connector gives the below capabilities:
 
-1. CofenseBasedIndicatorCreator :
+1. CofenseBasedIndicatorCreator:
 Get Threat Indicators from the Cofense platform and create Threate Intelligence Indicators in Microsoft Sentinel.
 Ingest Cofense Indicator ID and report links into custom logs table.
-2. NonCofenseBasedIndicatorCreatorToCofense :
+2. NonCofenseBasedIndicatorCreatorToCofense:
 Get Non-Cofense Threat Intelligence Indicators from Microsoft Sentinel Threat Intelligence and create/update Indicators in Cofese.
 
 For more details of REST APIs refer to the below two documentations:
