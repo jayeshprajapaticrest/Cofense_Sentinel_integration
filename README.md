@@ -24,10 +24,10 @@ For more details of REST APIs refer to the below two documentations:
  
 ## Prerequisites<a name="Prerequisites"></a>
 To integrate with Cofense Triage make sure you have:
-1. **Azure Subscription:**:  Azure Subscription with owner role is required to register an application in azure active directory(AAD) and assign role of contributor to AAD application in resource group.
-2. **Workspace**: read and write permissions on the workspace are required.
-3. **Keys**: read permissions to shared keys for the workspace are required.[See the documentation to learn more about workspace keys](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows#obtain-workspace-id-and-key).
-4. **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required.[See the documentation to learn more about Azure Functions](https://docs.microsoft.com/azure/azure-functions/).
+1. **Azure Subscription:**  Azure Subscription with owner role is required to register an application in azure active directory(AAD) and assign role of contributor to AAD application in resource group.
+2. **Workspace:** read and write permissions on the workspace are required.
+3. **Keys:** read permissions to shared keys for the workspace are required.[See the documentation to learn more about workspace keys](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows#obtain-workspace-id-and-key).
+4. **Microsoft.Web/sites permissions:** Read and write permissions to Azure Functions to create a Function App is required.[See the documentation to learn more about Azure Functions](https://docs.microsoft.com/azure/azure-functions/).
 5. **REST API Credentials/permissions:** **Cofense Client ID** and **Client Secret** is required. See the documentation to learn more about API on the `https://<YourCofenseInstance>.phishmecloud.com/docs/api/v2/index.html`.
 
 ## Folders<a name="Folders"></a>
