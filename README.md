@@ -88,9 +88,7 @@ Follow the steps in this section to assign the role:
 
 ### STEP 4 - Configuration steps for the Cofense Client ID and Client Secret
 
-Follow these instructions to create an Cofense Client ID and Client Secret:
-
-1. Include the steps here.
+* Get Cofense Client ID and Client Secret from the Cofense Triage.
 
 ## Deployment<a name="Deployment"></a>
 **Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function:**
