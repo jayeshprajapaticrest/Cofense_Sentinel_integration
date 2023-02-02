@@ -58,7 +58,7 @@ This integration requires an App registration in the Azure portal. Follow the st
 5. Select Register to complete the initial app registration.
 6. When registration finishes, the Azure portal displays the app registration's Overview pane. You see the Application (client) ID and Tenant ID. The client ID and Tenant ID is required as configuration parameters for the execution of CofenseTriage Data Connector.
 
-**Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
+> **Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
 
 ### STEP 2 - Add a client secret for Microsoft Azure Active Directory Application
 
@@ -71,7 +71,7 @@ Sometimes called an application password, a client secret is a string value requ
 5. Select Add.
 6. *Record the secret's value for use in your client application code. This secret value is never displayed again after you leave this page.* The secret value is required as configuration parameter for the execution of CofenseTriage Data Connector.
 
-**Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
+> **Reference link:** [https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret)
 
 ### STEP 3 - Assign role of Contributer to Microsoft Azure Active Directory Application
 
@@ -85,6 +85,7 @@ Follow the steps in this section to assign the role:
 6. Click on add members and type your app name that you have created and select it.
 7. Now click on Review + assign and then again click on Review + assign.
 
+> **Reference link:** [https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal)
 
 ### STEP 4 - Configuration steps for the Cofense Client ID and Client Secret
 
