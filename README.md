@@ -10,10 +10,10 @@
 The Cofense-Triage data connector gives the below capabilities:
 
 1. CofenseBasedIndicatorCreator:
-Get Threat Indicators from the Cofense platform and create Threate Intelligence Indicators in Microsoft Sentinel.
+Get Threat Indicators from the Cofense platform and create Threat Intelligence Indicators in Microsoft Sentinel.
 Ingest Cofense Indicator ID and report links into custom logs table.
 2. NonCofenseBasedIndicatorCreatorToCofense:
-Get Non-Cofense Threat Intelligence Indicators from Microsoft Sentinel Threat Intelligence and create/update Indicators in Cofese.
+Get Non-Cofense Threat Intelligence Indicators from Microsoft Sentinel Threat Intelligence and create/update Indicators in Cofense.
 
 For more details of REST APIs refer to the below two documentations:
 
@@ -34,9 +34,9 @@ To integrate with Cofense Triage make sure you have:
 
 1. `CofenseDataConnector/` - This contains the package, requirements, ARM JSON file, connector page template JSON, and other dependencies.
 
-2. `CofenseBasedIndicatorCreator/` - This contains the Azure function source code to ingest Cofense Triage Threat Indicators into Microsoft Sentinel Threat Intelligece indicators .
+2. `CofenseBasedIndicatorCreator/` - This contains the Azure function source code to ingest Cofense Triage Threat Indicators into Microsoft Sentinel Threat Intelligence indicators .
 
-3. `NonCofenseBasedIndicatorCreatorToCofense` - This contains the Azure function source code to ingest Microsoft Sentinel Threat Intelligece indicators into Cofense Triage Threat Indicators.
+3. `NonCofenseBasedIndicatorCreatorToCofense` - This contains the Azure function source code to ingest Microsoft Sentinel Threat Intelligence indicators into Cofense Triage Threat Indicators.
 
 4. `SharedCode` - This contains the common source code for the execution of both `CofenseBasedIndicatorCreator` and `NonCofenseBasedIndicatorCreatorToCofense` Azure functions.
 
@@ -97,7 +97,7 @@ Follow the steps in this section to assign the role:
 > **IMPORTANT:** Before deploying the Cofense Threat Indicators data connector, have the  Workspace ID and Workspace Primary Key.
 
 #### Option 1 - Azure Resource Manager (ARM) Template
-Use this method for automated deployment of the Cofence connector.
+Use this method for automated deployment of the Cofense connector.
 
 1. Go to Microsoft Sentinel -> Data Connectors.
 3. Click on the Cofense Triage Data Connector, connector page will open.
