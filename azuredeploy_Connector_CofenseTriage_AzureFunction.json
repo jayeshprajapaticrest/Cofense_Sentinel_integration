@@ -44,7 +44,7 @@
             }
         },
 	    "Azure_Client_Id":{
-            "type": "securestring",
+            "type": "string",
             "minLength": 1,
             "metadata": {
                 "description": "Enter Azure Client Id that you have created during app registration."
@@ -58,7 +58,7 @@
             }
         },
 	    "Azure_Tenant_Id":{
-            "type": "securestring",
+            "type": "string",
             "minLength": 1,
             "metadata": {
                 "description": "Enter Azure Tenant Id of your Azure Active Directory."
@@ -118,6 +118,12 @@
             "metadata": {
                 "description": "Debug, Info, Error, Warning"
             },
+            "allowedValues": [
+            "Debug",
+            "Info",
+            "Error",
+            "Warning"
+            ],
             "defaultValue": "Info"
         },
 	    "Reports_Table_name":{
