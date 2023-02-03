@@ -3,88 +3,139 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "FunctionName": {
-            "defaultValue": "BitSight",
+            "defaultValue": "Cofense",
             "minLength": 1,
             "maxLength": 11,
             "type": "string"
         },
         "WorkspaceID": {
             "type": "string",
-            "defaultValue": "<workspaceID>"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Workspace ID of log analytics Workspace."
+            }
         },
         "WorkspaceKey": {
             "type": "securestring",
-            "defaultValue": "<workspaceKey>"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Workspace Key of log analytics Workspace."
+            }
         },
         "BaseURL": {
             "type": "string",
-            "defaultValue": "https://reltest6.phishmecloud.com/"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Base URL for example https://your-cofense-instance-name.phishmecloud.com/."
+            }
         },
-        "Cofense_Client_Id": {
+        "Cofense_Client_Id":{
             "type": "string",
-            "defaultValue": "b0CqoyHlAnptQlQW0h45XV8Ka2b7dKczZzatP-zNESo"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Cofense Client Id for authentication of cofense."
+            }
         },
-        "Cofense_Client_Secret": {
-            "type": "string",
-            "defaultValue": "QOrEEbN7vp8xjAXm4uqJPJVkOjVB94mtOEYXiriAx8M"
+	    "Cofense_Client_Secret":{
+            "type": "securestring",
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Cofense Client Secret for authentication of cofense."
+            }
         },
-        "Azure_Client_Id": {
-            "type": "string",
-            "defaultValue": "39601350-e6d8-48f7-9400-c8041922d817"
+	    "Azure_Client_Id":{
+            "type": "securestring",
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Azure Client Id that you have created during app registration."
+            }
         },
-        "Azure_Client_Secret": {
-            "type": "string",
-            "defaultValue": "5Fu8Q~91sXrKQa_x8U55B0TZuymvbm0YD2PXIao1"
+	    "Azure_Client_Secret":{
+            "type": "securestring",
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Azure Client Secret that you have created during creating the client secret."
+            }
         },
-        "Azure_Tenant_Id": {
-            "type": "string",
-            "defaultValue": "3adb963c-8e61-48e8-a06d-6dbb0dacea39"
+	    "Azure_Tenant_Id":{
+            "type": "securestring",
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Azure Tenant Id of your Azure Active Directory."
+            }
         },
-        "Azure_Resource_Group_Name": {
+	    "Azure_Resource_Group_Name":{
             "type": "string",
-            "defaultValue": "Cofense_Sentinel_Integration_29598"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Azure Resource Group Name in which you want deploy the data connector."
+            }
         },
-        "Azure_Workspace_Name": {
+	    "Azure_Workspace_Name":{
             "type": "string",
-            "defaultValue": "cofense-sentinel-workspace-1"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Microsoft Sentinel Workspace Name of log analytics Workspace."
+            }
         },
-        "Azure_Subscription_Id": {
+	    "Azure_Subscription_Id":{
             "type": "string",
-            "defaultValue": "ec3e5f16-67b5-40aa-9289-23311c95451c"
+            "minLength": 1,
+            "metadata": {
+                "description": "Enter Azure Subscription Id which is present in the subscription tab in Microsoft Sentinel."
+            }
         },
-        "Proxy_Username": {
+	    "Proxy_Username":{
             "type": "string",
-            "defaultValue": "crest"
+            "defaultValue": "",
+            "metadata": {
+                "description": "This is an optional parameter if required enter the proxy username."
+            }
         },
-        "Proxy_Password": {
-            "type": "string",
-            "defaultValue": "Crest123"
+	    "Proxy_Password":{
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "This is an optional parameter if required enter the proxy password."
+            }
         },
-        "Proxy_URL": {
+	    "Proxy_URL":{
             "type": "string",
-            "defaultValue": "103.108.207.59"
+            "defaultValue": "",
+            "metadata": {
+                "description": "This is an optional parameter if required enter the proxy url."
+            }
         },
-        "Proxy_Port": {
+        "Proxy_Port":{
             "type": "string",
-            "defaultValue": "9480"
+            "defaultValue": "",
+            "metadata": {
+                "description": "This is an optional parameter if required enter the proxy port."
+            }
         },
         "LogLevel": {
             "type": "string",
-            "defaultValue": "DEBUG"
+            "metadata": {
+                "description": "Debug, Info, Error, Warning"
+            },
+            "defaultValue": "Info"
         },
-        "Reports_Table_name": {
+	    "Reports_Table_name":{
             "type": "string",
             "defaultValue": "reports_table"
         },
-        "Schedule": {
+        "Schedule":{
             "type": "string",
-            "defaultValue": "<Cron Expression>"
+            "minLength": 11,
+            "metadata": {
+                "description": "Enter a valid Quartz cron-expression. (Example: 0 0 0 * * *)"
+            }
         }
     },
     "variables": {
         "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
-        "StorageSuffix": "[environment().suffixes.storage]",
-        "LogAnaltyicsUri": "[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
+         "StorageSuffix": "[environment().suffixes.storage]",
+         "LogAnaltyicsUri": "[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
     },
     "resources": [
         {
@@ -221,10 +272,10 @@
                         "Proxy_Password": "[parameters('Proxy_Password')]",
                         "Proxy_URL": "[parameters('Proxy_URL')]",
                         "Proxy_Port": "[parameters('Proxy_Port')]",
-                        "Reports_Table_name": "[parameters('Proxy_Port')]",
+                        "Reports_Table_name": "[parameters('Reports_Table_name')]",
                         "Schedule": "[parameters('Schedule')]",
-                        "LogLevel": "[parameters('LogLevel')]",
-                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/harshcds1212/Cofense_Sentinel_integration/blob/main/Cofense.zip?raw=true"
+			            "LogLevel": "[parameters('LogLevel')]",
+                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/harshcds1212/Cofense_Sentinel_integration/blob/main/checkpoint_descending.zip?raw=true"
                     }
                 }
             ]
